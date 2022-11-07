@@ -9,6 +9,13 @@
 # NOTE: What type of error does python throw if you try to turn a non-number string into an integer?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
 
+def validate_user_input():
+    num = input('Please enter a number ')
+    try:
+        return int(num)
+    except ValueError:
+        print('You did not enter a valid number, please try again')
+        return validate_user_input()
 
 # 1.2 TODO: Once you are done, uncomment the two lines below to ensure that your code works as expected
 
@@ -24,6 +31,11 @@
 # NOTE: What type of error does python throw if you try to index into a list past the number of items in it?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
 
+def print_tenth_item(top_ten: list):
+    try:
+        print(top_ten[9])
+    except IndexError:
+        print('N/A')
 
 # 2.2 TODO: Once you are done, uncomment the two lines below to ensure that your code works as expected
 
